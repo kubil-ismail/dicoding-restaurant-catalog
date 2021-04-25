@@ -75,7 +75,8 @@ span {
 
 .navbar-item a {
   text-decoration: none;
-  padding: 8px;
+  padding: 15px 10px;
+  display: inline;
   color: #000000;
   font-weight: 600;
 }
@@ -94,6 +95,11 @@ span {
 
 .navbar-collapse-btn i {
   font-size: 25px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -130,8 +136,11 @@ span {
 
 .headmaster {
   background-image: url("https://i.ibb.co/ryH1yM3/hero-image-1.jpg");
-  background-position: top center;
-  height: 550px;
+  /* background-position: top center; */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 600px;
 }
 
 .headmaster-content {
@@ -180,8 +189,8 @@ span {
 .btn {
   background-color: #f7b525 !important;
   border: none;
-  padding: 10px 20px;
   font-weight: 600;
+  padding: 15px 20px;
 }
 
 .restaurant {
