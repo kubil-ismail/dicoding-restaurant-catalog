@@ -7,6 +7,7 @@ import {
   reviewTemplate,
 } from "../templates/detail-template";
 import RestaurantSource from "../../data/restaurant-source";
+import LikeButtonInitiator from "../../utils/like-button-initiator";
 
 const Detail = {
   async render() {
@@ -42,6 +43,7 @@ const Detail = {
             <p class="location-text"></p>
             <p class="rating-text"></p>
         </div>
+        <div id="likeButtonContainer"></div>
     `;
   },
 
@@ -83,6 +85,11 @@ const Detail = {
 
     location.innerHTML = `${restaurant.address}, ${restaurant.city}`;
     rating.innerHTML = `Overall Rating: ${restaurant.rating}`;
+
+    LikeButtonInitiator.init({
+      likeButtonContainer: document.querySelector("#likeButtonContainer"),
+      restaurant,
+    });
   },
 };
 

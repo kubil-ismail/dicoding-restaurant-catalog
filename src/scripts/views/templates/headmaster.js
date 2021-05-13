@@ -12,7 +12,21 @@ export const headmasterHome = `
               equipment so that they are more hygienic, in Olah without MSG and
               preservatives, making it taste different than others.
             </p>
-            <button class="btn button-center">Learn more</button>
+          </div>
+        </div>
+      </div>
+`;
+
+export const headmasterFavorite = `
+    <div class="headmaster">
+        <div class="headmaster-content">
+          <div>
+            <h1 class="text-center headmaster-title">
+              Favorites Restaurant
+            </h1>
+            <p class="text-center headmaster-desc">
+              You can view your favorites restaurant here
+            </p>
           </div>
         </div>
       </div>
