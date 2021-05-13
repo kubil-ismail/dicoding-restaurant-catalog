@@ -1,4 +1,6 @@
-const headmaster = `
+import CONFIG from '../../globals/config';
+
+export const headmasterHome = `
     <div class="headmaster">
         <div class="headmaster-content">
           <div>
@@ -16,4 +18,22 @@ const headmaster = `
       </div>
 `;
 
-export default headmaster;
+export const headmasterDetail = (param) => {
+  const { name, description, pictureId } = param;
+  return `
+    <div class="headmaster headmaster-detail" style=" background-image: url('${
+  CONFIG.PICTURE_URL + pictureId
+}') !important; ">
+      <div class="headmaster-content">
+        <div>
+          <h1 class="text-center headmaster-title">
+            ${name}
+          </h1>
+          <p class="text-center headmaster-desc">
+            ${description}
+          </p>
+        </div>
+      </div>
+    </div>
+  `;
+};

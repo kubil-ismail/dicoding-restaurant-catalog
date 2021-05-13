@@ -1,5 +1,5 @@
 /* eslint-disable quotes */
-import Headmaster from "../templates/headmaster";
+import { headmasterHome } from "../templates/headmaster";
 import RestaurantList from "../templates/restaurant-list";
 import RestaurantSource from "../../data/restaurant-source";
 
@@ -16,7 +16,7 @@ const Home = {
   async afterRender() {
     const restaurant = await RestaurantSource.getRestaurant();
     const restaurantContainer = document.querySelector("#restaurant");
-    document.querySelector("#headcontent").innerHTML = Headmaster;
+    document.querySelector("#headcontent").innerHTML = headmasterHome;
     restaurant.forEach((element) => {
       const card = document.createElement("div");
       card.innerHTML = RestaurantList(element);
