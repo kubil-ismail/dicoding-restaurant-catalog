@@ -41,13 +41,13 @@
             <div class="navbar-collapse">
               <ul class="navbar-menu">
                 <li class="navbar-item">
-                  <a href="/">Home</a>
+                  <a href="#/">Home</a>
                 </li>
                 <li class="navbar-item">
-                  <a href="#">Favorite</a>
+                  <a href="#/about-us">About Us</a>
                 </li>
                 <li class="navbar-item">
-                  <a href="https://github.com/kubil-ismail">About Us</a>
+                  <a href="#/favorite">Favorite</a>
                 </li>
               </ul>
             </div>
@@ -55,28 +55,9 @@
         </nav>
       </header>
 
-      <div class="headmaster">
-        <div class="headmaster-content">
-          <div>
-            <h1 class="text-center headmaster-title">
-              With yummie recipe from Indonesia
-            </h1>
-            <p class="text-center headmaster-desc">
-              Traditional recipes in concoction and produced with modern
-              equipment so that they are more hygienic, in Olah without MSG and
-              preservatives, making it taste different than others.
-            </p>
-            <button class="btn button-center">Learn more</button>
-          </div>
-        </div>
-      </div>
+      <div id="headcontent"></div>
 
-      <div id="maincontent" class="restaurant container">
-        <div class="restaurant-content">
-          <h2 class="text-center restaurant-title">Explore Restaurant</h2>
-          <div class="grid content-list"></div>
-        </div>
-      </div>
+      <div id="maincontent" class="restaurant container"></div>
 
       <footer>
         <div class="footer-content">
@@ -84,142 +65,5 @@
         </div>
       </footer>
     </div>
-
-    <script>
-      let drawerBtn = document.getElementsByClassName("navbar-collapse-btn")[0];
-      let collapseDrawer = document.getElementsByClassName(
-        "navbar-collapse"
-      )[0];
-      drawerBtn.addEventListener("click", () => {
-        if (drawerBtn.classList.length === 1) {
-          drawerBtn.classList.add("navbar-collapse-btn-active");
-          collapseDrawer.classList.add("navbar-collapse-active");
-        } else {
-          collapseDrawer.classList.remove("navbar-collapse-active");
-          drawerBtn.classList.remove("navbar-collapse-btn-active");
-        }
-      });
-
-      const data = {
-        restaurants: [
-          {
-            id: "6c7bqjgi84kcowlqdz",
-            name: "Bring Your Phone Cafe",
-            description:
-              "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.",
-            pictureId:
-              "https://dicoding-restaurant-api.el.r.appspot.com/images/medium/41",
-            city: "Medan",
-            rating: 4.6,
-          },
-          {
-            id: "ljx8i0qu2uckcowlqdz",
-            name: "Run The Gun",
-            description:
-              "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.",
-            pictureId:
-              "https://dicoding-restaurant-api.el.r.appspot.com/images/medium/07",
-            city: "Bali",
-            rating: 4.6,
-          },
-          {
-            id: "fe8bbxoazddkcowlqdz",
-            name: "Pangsit Express",
-            description:
-              "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.",
-            pictureId:
-              "https://dicoding-restaurant-api.el.r.appspot.com/images/medium/29",
-            city: "Ternate",
-            rating: 4.8,
-          },
-          {
-            id: "ik1zljmlf68kcowlqdz",
-            name: "Ducky Duck",
-            description:
-              "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.",
-            pictureId:
-              "https://dicoding-restaurant-api.el.r.appspot.com/images/medium/38",
-            city: "Malang",
-            rating: 4.7,
-          },
-          {
-            id: "9jpuzkm6n6jkcowlqdz",
-            name: "Kafein",
-            description:
-              "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.",
-            pictureId:
-              "https://dicoding-restaurant-api.el.r.appspot.com/images/medium/40",
-            city: "Bali",
-            rating: 3.8,
-          },
-          {
-            id: "cpl5jpsnuqkkcowlqdz",
-            name: "Makan mudah",
-            description:
-              "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.",
-            pictureId:
-              "https://dicoding-restaurant-api.el.r.appspot.com/images/medium/08",
-            city: "Malang",
-            rating: 4.6,
-          },
-          {
-            id: "iqtf9hmdzvbkcowlqdz",
-            name: "Saya Suka",
-            description:
-              "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.",
-            pictureId:
-              "https://dicoding-restaurant-api.el.r.appspot.com/images/medium/32",
-            city: "Surabaya",
-            rating: 3.6,
-          },
-          {
-            id: "8i06gqcc2dpkcowlqdz",
-            name: "Gigitan Cepat",
-            description:
-              "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.",
-            pictureId:
-              "https://dicoding-restaurant-api.el.r.appspot.com/images/medium/45",
-            city: "Aceh",
-            rating: 4,
-          },
-          {
-            id: "wf5o19xhxxkcowlqdz",
-            name: "Fairy Cafe",
-            description:
-              "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.",
-            pictureId:
-              "https://dicoding-restaurant-api.el.r.appspot.com/images/medium/04",
-            city: "Malang",
-            rating: 3.9,
-          },
-        ],
-      };
-
-      let content = document.getElementsByClassName("content-list")[0];
-
-      data.restaurants.forEach((res) => {
-        let card = document.createElement("div");
-        card.innerHTML = `
-          <div class="grid-item">
-              <article class="article-card" tabindex="0">
-              <div class="head-article">
-                  <img
-                  src=`+res.pictureId+`
-                  alt="`+res.name+`image"
-                  width="100%"
-                  />
-                  <span>`+res.city+`</span>
-              </div>
-              <div class="content-article">
-                  <h3>`+res.name+`</h3>
-                  <p>Rating: <span>`+res.rating+`</span></p>
-                  <p class="article-desc">`+res.description+`</p>
-              </div>
-              </article>
-          </div>
-      `;
-        content.appendChild(card);
-      });
-    </script>
   </body>
 </html>

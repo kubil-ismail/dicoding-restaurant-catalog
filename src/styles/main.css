@@ -1,5 +1,4 @@
 body {
-  background-image: url("https://images.unsplash.com/photo-1519972064555-542444e71b54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80");
   display: flex;
   justify-content: center;
   padding: 0;
@@ -47,12 +46,19 @@ span {
 .content {
   background-color: #fff;
   width: 100vw;
+  z-index: 100;
 }
 
 @media only screen and (max-width: 768px) {
   .content {
     width: 100vw;
   }
+}
+
+.navbar {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
 }
 
 .navbar-content {
@@ -79,8 +85,9 @@ span {
   text-decoration: none;
   padding: 15px 10px;
   display: inline;
-  color: #000000;
+  color: #fff;
   font-weight: 600;
+  text-shadow: 5px 3px 11px rgb(46 46 46);
 }
 
 .navbar-item a:hover,
@@ -105,6 +112,12 @@ span {
 }
 
 @media only screen and (max-width: 768px) {
+  .navbar {
+    display: block;
+    background-color: #fff;
+    box-shadow: 5px 2px 20px 4px #4a4a4a;
+  }
+
   .navbar-content {
     display: block;
   }
@@ -136,12 +149,11 @@ span {
   }
 }
 
-.headmaster {
+#headcontent .headmaster {
   background-image: url("https://i.ibb.co/ryH1yM3/hero-image-1.jpg");
-  /* background-position: top center; */
-  background-size: 100% 100%;
+  background-position: bottom;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
   height: 600px;
 }
 
@@ -230,7 +242,6 @@ span {
 }
 
 .article-card {
-  cursor: pointer;
   border: 1px solid rgba(37, 36, 36, 0.2);
   border-radius: 10px;
   -webkit-box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.2);
@@ -251,6 +262,7 @@ span {
 }
 
 .head-article img {
+  cursor: pointer;
   border-radius: 10px 10px 0px 0px;
   max-height: 250px;
   min-height: 250px;
