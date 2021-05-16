@@ -20,7 +20,7 @@ body {
   background-color: #f7b525;
   color: white;
   padding: 8px;
-  z-index: 100;
+  z-index: 1000;
   text-decoration: none;
 }
 
@@ -155,6 +155,7 @@ span {
   background-size: cover;
   background-repeat: no-repeat;
   height: 600px;
+  z-index: 0;
 }
 
 #headcontent .headmaster-detail {
