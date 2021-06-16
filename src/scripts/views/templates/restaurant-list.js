@@ -1,9 +1,9 @@
-import CONFIG from '../../globals/config';
+/* eslint-disable object-curly-newline */
+/* eslint-disable quotes */
+import CONFIG from "../../globals/config";
 
 const restaurantList = (param) => {
-  const {
-    city, description, name, pictureId, rating, id,
-  } = param;
+  const { city, description, name, pictureId, rating, id } = param;
 
   return `
     <div class="grid-item">
@@ -11,9 +11,10 @@ const restaurantList = (param) => {
         <div class="head-article">
           <a href="/#/detail/${id}">
             <img
-              src=${CONFIG.PICTURE_URL + pictureId}
               alt="${name} image"
               width="100%"
+              class="lazyload"
+              data-src="${CONFIG.PICTURE_URL + pictureId}"
             />
           </a>
           <span>${city}</span>
